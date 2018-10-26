@@ -1,0 +1,21 @@
+<h3 class="mt-4 mb-4">Finding <small>{{ term }}</small></h3>
+
+<div class="">
+    <div *ngIf="dogs.length == 0" class="alert alert-primary" role="alert">
+        There are no results that match: {{ term }}
+    </div>
+</div>
+
+<div class="card-columns">
+    <div *ngFor="let dog of dogs; let i = index;" class="card animated fadeIn fast">
+        <img class="card-img-top" src="{{ dog.img }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ dog.name }}</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <button (click)="this.readDog(i)" type="button" class="btn btn-outline-primary">
+                Read More
+            </button>
+        </div>
+    </div>
+</div>

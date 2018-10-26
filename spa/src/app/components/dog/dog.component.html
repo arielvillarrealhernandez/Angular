@@ -1,0 +1,11 @@
+<div class="card mb-3 mt-3">
+    <img class="card-img-top" src="{{ dog.img }}" alt="Card image cap">
+    <div class="card-body">
+        <h2 class="card-title">{{dog.name}}</h2>
+        <p class="card-text">{{dog.bio}}</p>
+        <h4 class="mt-1">Attributes:</h4>
+        <ul class="mt-4 list-group list-group-flush">
+            <li *ngFor="let attr of dog.characteristics;" class="list-group-item">{{attr}}</li>
+        </ul>
+    </div>
+</div>
